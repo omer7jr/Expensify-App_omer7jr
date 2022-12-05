@@ -10,9 +10,11 @@
     "build:dev": "webpack",
     "build:prod": "webpack --env production",
     "dev-server": "webpack serve",
+    "start": "node server/server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.2",
