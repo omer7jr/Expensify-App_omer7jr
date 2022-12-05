@@ -1,5 +1,4 @@
 {
-  "homepage": "https://omer7jr.github.io/Expensify-App_omer7jr/",
   "name": "expensify-app",
   "version": "1.0.0",
   "main": "index.js",
@@ -11,8 +10,6 @@
     "build:prod": "webpack --env production",
     "dev-server": "webpack serve",
     "start": "node server/server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "jest --watch",
     "heroku-postbuild": "yarn run build:prod"
   },
