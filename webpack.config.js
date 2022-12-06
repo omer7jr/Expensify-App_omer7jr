@@ -2,13 +2,12 @@ const path = require('path');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
-    
+
     return {
         mode: env.production ? 'production' : 'development',
         entry: './src/app.js',
         output: {
-            
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             // publicPath: 'public',
             filename: 'bundle.js'
         },
@@ -20,7 +19,7 @@ module.exports = (env) => {
                 exclude: /node_modules/
             }, {
                 test: /\.s?css$/,
-                use: [ "style-loader", "css-loader", "sass-loader"],
+                use: ["style-loader", "css-loader", "sass-loader"],
 
             }],
         },
@@ -29,6 +28,7 @@ module.exports = (env) => {
 
             static: {
                 directory: path.resolve(__dirname, 'public'),
+                publicPath: '/dist',
 
             },
             port: 8080,
@@ -36,8 +36,8 @@ module.exports = (env) => {
             hot: true,
             compress: true,
             historyApiFallback: true,
-
+            
         }
-        
+
     }
 };
