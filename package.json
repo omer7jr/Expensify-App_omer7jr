@@ -50,10 +50,9 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
-    "mini-css-extract-plugin": "^2.7.0",
     "jest": "^29.3.1",
+    "mini-css-extract-plugin": "^2.7.0",
     "webpack-dev-server": "^4.11.1"
-    
   },
   "repository": "git@github.com:omer7jr/Expensify-App_omer7jr.git"
 }
